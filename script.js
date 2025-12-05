@@ -1,3 +1,2 @@
-// You can add interactive features later.
-// For now, this confirms your script file is working.
-console.log("Website loaded successfully!");
+// Placeholder for future interactive features
+console.log("Dr Saphire STEM & Medical Academy site loaded.");
