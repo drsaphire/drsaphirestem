@@ -24,14 +24,17 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(180deg, var(--purple-deep) 0%, #0b0715 60%);
+            background: linear-gradient(180deg, var(--purple-deep) 0%, #0b0715 60%, #06040d 100%);
             color: var(--white-soft);
+            overflow-x: hidden;
         }
 
         .glossy-card {
-            background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
-            border: 1px solid rgba(212,175,55,0.12);
-            backdrop-filter: blur(6px);
+            background: linear-gradient(160deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.03) 100%);
+            border: 1px solid rgba(212,175,55,0.18);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.35), inset 0 0 12px rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px) saturate(160%);
+            -webkit-backdrop-filter: blur(10px) saturate(160%);
         }
 
         .shine::after {
@@ -142,9 +145,10 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
+                  
+    </div>
+  </div>
+</section>
 
 
     <!-- SERVICES -->
@@ -201,22 +205,27 @@
     <section id="about" class="py-24 px-6 md:px-16">
   <div class="max-w-5xl mx-auto text-center">
     <h2 class="text-4xl font-bold text-lux-gold mb-6">About Me</h2>
-    <p class="text-lg leading-relaxed opacity-90">I am a dedicated educator with a strong foundation in STEM, medicine, and modern teaching methodology, supported by TEFL certification and ongoing PGCE training at UCL. My work is driven by a commitment to academic excellence and empowering learners through proven, research‑based approaches.</p>
+    <p class="text-lg leading-relaxed opacity-90">With an MBChB in Medicine and Surgery and a BSc in Neuroscience from the University of Bristol, I bring a rigorous scientific and clinical foundation to every aspect of my teaching. This strong academic background allows me to guide aspiring scientists, medics, and high-achieving students with precision, insight, and a deep understanding of what top universities and competitive pathways truly require. My expertise is further enhanced by TEFL certification and my ongoing PGCE at UCL, enabling me to deliver instruction that is not only academically elite but pedagogically modern, adaptive, and research‑informed.</p>
 
     <div class="mt-10 space-y-6 text-left max-w-3xl mx-auto">
       <div class="glossy-card p-6 rounded-2xl">
-        <h3 class="text-2xl font-semibold text-lux-purple-light">TEFL Certification</h3>
-        <p class="mt-2 opacity-90">Certified in Teaching English as a Foreign Language, equipped with strategies for effective communication and learner engagement across diverse backgrounds.</p>
-      </div>
-
-      <div class="glossy-card p-6 rounded-2xl">
         <h3 class="text-2xl font-semibold text-lux-purple-light">PGCE at UCL (Ongoing)</h3>
-        <p class="mt-2 opacity-90">Currently undertaking a Postgraduate Certificate in Education at University College London, focusing on modern pedagogical approaches, inclusive education, adaptive instruction, and the latest evidence‑based teaching practices.</p>
+        <p class="mt-2 opacity-90">Currently undertaking a Postgraduate Certificate in Education at University College London, focusing on modern pedagogical approaches, inclusive teaching, adaptive instruction, and evidence-based educational practice.</p>
       </div>
 
       <div class="glossy-card p-6 rounded-2xl">
-        <h3 class="text-2xl font-semibold text-lux-purple-light">Educational Philosophy</h3>
-        <p class="mt-2 opacity-90">I combine a luxury learner experience with rigorous academic standards, ensuring students not only achieve but exceed their aspirations through tailored, supportive, and contemporary educational practice.</p>
+        <h3 class="text-2xl font-semibold text-lux-purple-light">TEFL Certification</h3>
+        <p class="mt-2 opacity-90">Certified in Teaching English as a Foreign Language, equipped with refined strategies for effective communication, learner engagement, and facilitating academic success for students from diverse backgrounds.</p>
+      </div>
+
+      <div class="glossy-card p-6 rounded-2xl">
+        <h3 class="text-2xl font-semibold text-lux-purple-light">MBChB Medicine & Surgery</h3>
+        <p class="mt-2 opacity-90">My MBChB from the University of Bristol provides a deep clinical and diagnostic grounding, enabling me to coach future medical applicants with precision, authenticity, and a true understanding of the demands of medical school and clinical training pathways.</p>
+      </div>
+
+      <div class="glossy-card p-6 rounded-2xl">
+        <h3 class="text-2xl font-semibold text-lux-purple-light">BSc Neuroscience</h3>
+        <p class="mt-2 opacity-90">With a BSc in Neuroscience, I bring advanced scientific literacy, research expertise, and a strong grounding in brain and behavioural sciences. This allows me to support students aiming for neuroscience, psychology, biomedical and broader STEM degrees with academically rigorous guidance.</p>
       </div>
     </div>
   </div>
