@@ -11,12 +11,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
         :root {
-            --gold: #D4AF37;
-            --gold-deep: #b98c1d;
-            --purple: #4b2e83;
-            --purple-deep: #2e185e;
-            --metal-silver: #cfcfcf;
-            --metal-dark: #3a3a3a;
+            --gold: #C9A44E;
+            --gold-deep: #9E7C3C;
+            --purple: #3C256A;
+            --purple-deep: #22143F;
+            --metal-silver: #D8D8E2;
+            --metal-dark: #2C2C38;
             --white-soft: #f5f5f7;
             --glass: rgba(255,255,255,0.06);
             --panel: rgba(255,255,255,0.03);
@@ -34,19 +34,18 @@
         }
 
         .glossy-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.06) 100%),
-                        radial-gradient(circle at top left, rgba(212,175,55,0.25), transparent 60%),
-                        radial-gradient(circle at bottom right, rgba(147,112,219,0.25), transparent 60%);
-            border: 1.6px solid rgba(255,255,255,0.28);
-            box-shadow:
-                0 12px 40px rgba(0,0,0,0.55),
-                0 0 25px rgba(212,175,55,0.32),
-                inset 0 0 18px rgba(255,255,255,0.22),
-                inset 0 0 35px rgba(212,175,55,0.18);
-            backdrop-filter: blur(18px) saturate(220%);
-            -webkit-backdrop-filter: blur(18px) saturate(220%);
-            border-radius: 22px;
-        }
+      background: linear-gradient(145deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.05) 100%),
+                  radial-gradient(circle at top left, rgba(212,175,55,0.18), transparent 60%),
+                  radial-gradient(circle at bottom right, rgba(147,112,219,0.18), transparent 60%);
+      border: 1.2px solid rgba(255,255,255,0.18);
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.45),
+        0 0 18px rgba(212,175,55,0.22),
+        inset 0 0 14px rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px) saturate(150%);
+      -webkit-backdrop-filter: blur(12px) saturate(150%);
+      border-radius: 20px;
+    }
 
         .shine::after {
             content: '';
@@ -86,18 +85,7 @@
     }
 
     /* Hyper-Lux Floating Studio Light Sweep */
-    .glossy-card::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -150%;
-      width: 120%;
-      height: 100%;
-      background: linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.25) 45%, transparent 90%);
-      transform: skewX(-15deg);
-      animation: lightSweep 6s ease-in-out infinite;
-      pointer-events: none;
-    }
+    
 
     @keyframes lightSweep {
       0% { left: -150%; }
