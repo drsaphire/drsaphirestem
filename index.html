@@ -3,275 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr Saphire STEM and Medical Academy - Expert Coaching</title>
-    <!-- Load Tailwind CSS -->
+    <title>Dr Saphire STEM and Medical Academy — Premium Coaching</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Inter font family -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fb; /* Very light blue-grey background */
+        :root{
+            --gold:#D4AF37;
+            --gold-deep:#b88f22;
+            --glass: rgba(255,255,255,0.04);
+            --panel: rgba(255,255,255,0.03);
         }
+        body{font-family: 'Inter', sans-serif; background: linear-gradient(180deg,#000000 0%, #070707 60%); color:#e6e6e6;}
+        .glossy-card{background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border:1px solid rgba(212,175,55,0.08); backdrop-filter: blur(6px);}
+        .shine::after{content:''; position:absolute; inset:0; background:linear-gradient(120deg, rgba(255,255,255,0.06), rgba(255,255,255,0) 25%); mix-blend-mode: overlay; pointer-events:none}
+        /* small accessible focus styles */
+        .focus-ring:focus{outline:3px solid rgba(212,175,55,0.18); outline-offset:3px}
     </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary-blue': '#1e40af', // A deep, professional blue
-                        'secondary-green': '#059669', // A clear, clinical green
-                        'accent-gold': '#f59e0b', // A touch of gold for distinction
+                        'lux-gold': '#D4AF37',
+                        'lux-gold-deep': '#b88f22',
+                        'lux-black':'#000000',
+                        'card-glow':'rgba(212,175,55,0.08)'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="min-h-screen antialiased text-gray-800">
+<body class="min-h-screen antialiased text-gray-100">
 
-    <!-- Navigation Bar -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-            <!-- Logo and Site Name -->
-            <a href="#" class="flex items-center space-x-3 text-primary-blue transition duration-300">
-                <!-- Custom SVG Logo: S for Saphire, styled with medical/science elements -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-secondary-green">
-                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM9.813 5.51a1.21 1.21 0 0 0-.61 1.085v3.134a1.21 1.21 0 0 0 .61 1.085l3.227 1.864a1.21 1.21 0 0 0 1.22 0l3.227-1.864a1.21 1.21 0 0 0 .61-1.085V6.595a1.21 1.21 0 0 0-.61-1.085L13.62 3.646a1.21 1.21 0 0 0-1.22 0L9.813 5.51Z" clip-rule="evenodd" />
-                    <path d="M11.964 12.871 8.27 15.023A2.3 2.3 0 0 0 7.5 17.07V18.75c0 1.57.84 2.853 1.94 3.498l.613.354c.484.28.887.428 1.447.428a2.536 2.536 0 0 0 1.447-.428l.613-.354c1.1-.645 1.94-1.928 1.94-3.498v-1.68a2.3 2.3 0 0 0-.77-2.047l-3.694-2.152v-.001Z" />
-                </svg>
-                <span class="text-xl font-extrabold tracking-tight">Dr Saphire STEM and Medical Academy</span>
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 bg-black/60 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-6 lg:px-12 flex items-center justify-between py-4">
+            <a href="#" class="flex items-center gap-4">
+                <!-- Logo: Rod of Asclepius inside a polished circle (gold strokes) -->
+                <div class="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-black/30 to-transparent ring-1 ring-gold-deep/20" aria-hidden>
+                    <svg width="44" height="44" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dr Saphire logo">
+                        <circle cx="32" cy="32" r="30" stroke="var(--gold)" stroke-width="2.5" fill="url(#g)"/>
+                        <defs>
+                            <linearGradient id="g" x1="0" x2="1">
+                                <stop offset="0" stop-color="#000" stop-opacity="0.15" />
+                                <stop offset="1" stop-color="#000" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Rod of Asclepius stylised -->
+                        <path d="M32 18 V44" stroke="var(--gold)" stroke-width="2.8" stroke-linecap="round" />
+                        <path d="M32 26 C36 24, 40 26, 40 30 C40 34, 36 36, 32 34 C28 32, 24 34, 24 38 C24 42, 28 44, 32 42" stroke="var(--gold)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="32" cy="14" r="2.6" fill="var(--gold)" />
+                    </svg>
+                </div>
+                <div class="leading-tight">
+                    <div class="text-lg font-bold tracking-wide text-white">Dr Saphire</div>
+                    <div class="text-xs text-gold-deep/60">STEM & Medical Academy</div>
+                </div>
             </a>
-            <!-- Desktop Navigation Links -->
-            <nav class="hidden md:flex space-x-8 font-medium">
-                <a href="#services" class="text-gray-600 hover:text-primary-blue transition duration-300">Services</a>
-                <a href="#about" class="text-gray-600 hover:text-primary-blue transition duration-300">About Dr. Saphire</a>
-                <a href="#coaching" class="text-gray-600 hover:text-primary-blue transition duration-300">Coaching & Mentoring</a>
-                <a href="#contact" class="text-white px-4 py-2 rounded-full bg-secondary-green hover:bg-primary-blue transition duration-300 shadow-md">Book a Consultation</a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#services" class="text-gray-300 hover:text-white transition">Services</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+                <a href="#coaching" class="text-gray-300 hover:text-white transition">Coaching</a>
+                <a href="#contact" class="px-4 py-2 rounded-full bg-gradient-to-r from-lux-gold to-lux-gold-deep text-black font-semibold shadow-md hover:brightness-105 transition">Book Consultation</a>
             </nav>
-            <!-- Mobile Menu Button (Hamburger) - Not fully implemented for simplicity, but good practice -->
-            <button class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 transition duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+
+            <!-- mobile toggle -->
+            <button id="mobileBtn" class="md:hidden p-2 rounded-md text-gray-200 focus-ring focus:outline-none" aria-label="Open menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="bg-primary-blue text-white py-20 md:py-32 shadow-xl">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
-                    Elevate Your Future in <span class="text-secondary-green">STEM and Medicine</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
-                    Expert tuition, coaching, and mentoring led by a dedicated Doctor and PGCE Secondary Science Teacher Trainee.
-                </p>
-                <div class="space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="#services" class="inline-block px-8 py-3 bg-accent-gold text-primary-blue font-bold rounded-full text-lg shadow-xl hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
-                        Explore Our Services
-                    </a>
-                    <a href="#contact" class="inline-block px-8 py-3 border-2 border-white text-white font-bold rounded-full text-lg hover:bg-white hover:text-primary-blue transition duration-300 transform hover:scale-105">
-                        Get Started
-                    </a>
+    <!-- HERO -->
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 pointer-events-none"></div>
+        <div class="container mx-auto px-6 lg:px-12 py-24 lg:py-36 relative z-10">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-2/3">
+                    <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">Excellence in <span class="text-lux-gold">STEM & Medicine</span></h1>
+                    <p class="mt-4 max-w-2xl text-gray-300 text-lg">Premium tutoring, medical application coaching, and bespoke STEM mentoring delivered with clinical insight and a luxury experience.</p>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#services" class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-lux-gold to-lux-gold-deep text-black font-semibold shadow-xl transform hover:scale-[1.02] transition">Explore Services</a>
+                        <a href="#contact" class="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-gray-700 text-gray-200 hover:text-white transition">Contact Dr Saphire</a>
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-primary-blue">
-                    Our Core Expertise
-                </h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                    <!-- Service Card 1: Science Exam Tuition -->
-                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-secondary-green">
-                        <svg class="w-10 h-10 text-secondary-green mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                        <h3 class="text-xl font-semibold mb-3 text-primary-blue">Science Exam Tuition (GCSE/A-Level)</h3>
-                        <p class="text-gray-600">Specialist support in Biology, Chemistry, and Physics. Deep conceptual understanding combined with exam technique to maximize grades.</p>
-                    </div>
-
-                    <!-- Service Card 2: STEM Career Coaching -->
-                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-blue">
-                        <svg class="w-10 h-10 text-primary-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.55 23.55 0 0112 15c-1.399 0-2.751-.106-4.047-.309m4.047 0A2.378 2.378 0 0012 18.75c-2.895 0-5.385-1.992-6.326-4.707M12 12.75a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"></path></svg>
-                        <h3 class="text-xl font-semibold mb-3 text-primary-blue">STEM Career Coaching & Mentoring</h3>
-                        <p class="text-gray-600">Guidance for aspiring scientists and engineers. Understand career paths, required qualifications, and industry insights.</p>
-                    </div>
-
-                    <!-- Service Card 3: Medical Interview Coaching -->
-                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-secondary-green">
-                        <svg class="w-10 h-10 text-secondary-green mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h.01M9 14h.01M16 18h.01M17 14h.01M7 11h10a2 2 0 012 2v7a2 2 0 01-2 2H7a2 2 0 01-2-2v-7a2 2 0 012-2z"></path></svg>
-                        <h3 class="text-xl font-semibold mb-3 text-primary-blue">Medical Interview & Application Coaching</h3>
-                        <p class="text-gray-600">Insider coaching for successful entry into Medicine (UCAS, UCAT, BMAT, and MMI/Panel Interviews) from an experienced Doctor.</p>
-                    </div>
-
-                    <!-- Service Card 4: English Language Support -->
-                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-blue">
-                        <svg class="w-10 h-10 text-primary-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM16.5 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM16.5 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM7.5 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM7.5 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"></path></svg>
-                        <h3 class="text-xl font-semibold mb-3 text-primary-blue">English Language Tutoring (TEFL Certified)</h3>
-                        <p class="text-gray-600">Teaching English as a Foreign Language (TEFL) for comprehensive language skills and academic writing.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- About Dr. Saphire Section (UPDATED) -->
-        <section id="about" class="py-16 md:py-24 bg-gray-100">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="lg:flex lg:items-start lg:space-x-12">
-                    <!-- Placeholder for professional image -->
-                    <div class="lg:w-1/3 mb-8 lg:mb-0 flex-shrink-0">
-                        <img src="https://placehold.co/400x400/1e40af/ffffff?text=Dr+Saphire" alt="Professional portrait of Dr. Saphire" class="w-64 h-64 mx-auto lg:mx-0 rounded-full object-cover shadow-2xl border-4 border-white">
-                    </div>
-                    <!-- Biography/Experience -->
-                    <div class="lg:w-2/3">
-                        <span class="text-secondary-green font-semibold uppercase tracking-wider mb-2 block">Our Founder's Expertise</span>
-                        <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-primary-blue">
-                            Dr. Saphire: Clinical Excellence Meets Advanced Pedagogy
-                        </h2>
-
-                        <!-- Content Block 1: Academic Foundation -->
-                        <p class="text-lg text-gray-700 mb-4">
-                            Dr Saphire is a medically trained educator with a strong academic foundation and over a decade of clinical and communication experience. She holds an **MBChB** (Bachelor of Medicine, Bachelor of Surgery) and a **BSc in Neuroscience** from the University of Bristol, alongside a **Postgraduate Diploma in Clinical Dermatology** from the University of South Wales.
-                        </p>
-
-                        <!-- Content Block 2: PGCE and Pedagogy -->
-                        <p class="text-lg text-gray-700 mb-4">
-                            She is currently completing a **PGCE in Secondary Science at University College London (UCL)**—an internationally respected programme known for its focus on evidence-based, research-led pedagogy. Her training incorporates the latest developments in cognitive science, metacognition, adaptive teaching, formative assessment, curriculum design, and high-impact instructional strategies used across outstanding UK secondary schools.
-                        </p>
-
-                        <!-- Content Block 3: TEFL and Clinical Experience -->
-                        <p class="text-lg text-gray-700 mb-4">
-                            With additional **TEFL certification**, she is equipped to support both UK-based and international learners, ensuring they develop strong scientific understanding as well as high-level academic English skills. Across more than **10 years of clinical practice** in NHS hospitals including the Royal Bournemouth and Yeovil District Hospital, Dr Saphire has developed exceptional strengths in clear communication, complex problem-solving, structured decision-making, and supporting individuals through sensitive or challenging situations. These professional skills translate directly into her tutoring approach.
-                        </p>
-
-                        <!-- Content Block 4: Teaching Philosophy -->
-                        <p class="text-lg text-gray-700 mb-6">
-                            Combining medical expertise with modern pedagogical training, she delivers structured, scientifically grounded and highly personalised tuition. Her teaching focuses on simplifying complex scientific concepts, strengthening exam technique, building metacognitive awareness, and developing confident, independent learners.
-                        </p>
-
-                        <!-- Key Strengths List -->
-                        <h3 class="text-xl font-semibold mb-3 text-secondary-green">Key Strengths:</h3>
-                        <div class="grid md:grid-cols-2 gap-x-6 gap-y-2 text-gray-700">
-                            <p class="flex items-center space-x-2"><span class="text-secondary-green font-bold text-xl">&bull;</span> <span>Evidence-based UCL pedagogy</span></p>
-                            <p class="flex items-center space-x-2"><span class="text-secondary-green font-bold text-xl">&bull;</span> <span>Expertise in Biology, Chemistry, Physics & Medical Sciences</span></p>
-                            <p class="flex items-center space-x-2"><span class="text-secondary-green font-bold text-xl">&bull;</span> <span>Skilled communicator with TEFL certification</span></p>
-                            <p class="flex items-center space-x-2"><span class="text-secondary-green font-bold text-xl">&bull;</span> <span>Experience developing accessible, high-quality learning materials</span></p>
-                            <p class="flex items-center space-x-2"><span class="text-secondary-green font-bold text-xl">&bull;</span> <span>Strong clinical judgement and analytical reasoning</span></p>
-                            <p class="flex items-center space-x-2"><span class="text-secondary-green font-bold text-xl">&bull;</span> <span>Compassionate, supportive mentoring for STEM and healthcare pathways</span></p>
+                <div class="lg:w-1/3 mt-10 lg:mt-0">
+                    <div class="glossy-card relative p-6 rounded-2xl shadow-2xl border border-card-glow">
+                        <div class="flex items-center gap-4">
+                            <img src="https://placehold.co/120x120/111111/ffffff?text=Dr" alt="Dr Saphire portrait" class="w-20 h-20 rounded-full object-cover ring-1 ring-gray-700"/>
+                            <div>
+                                <div class="text-lg font-bold">Dr Saphire, MBChB, BSc</div>
+                                <div class="text-sm text-gray-300">Doctor | PGCE Secondary Science (UCL) | Clinical Educator</div>
+                            </div>
                         </div>
-                        
-                        <p class="text-lg text-gray-700 mt-6 pt-4 border-t border-gray-200">
-                            This unique blend of clinical professionalism, academic excellence and advanced teacher training positions Dr Saphire as a **premium educator** for GCSE, A Level, STEM pathway students, and applicants preparing for competitive medical and dental school entry.
-                        </p>
-
+                        <div class="mt-4 text-sm text-gray-300">Specialist medical interview coaching, UCAT/BMAT strategy, A-Level tuition, and bespoke STEM mentoring with a luxury, results-driven approach.</div>
+                        <div class="mt-6 flex gap-3">
+                            <a href="#contact" class="flex-1 text-center px-3 py-2 rounded-md bg-transparent border border-lux-gold text-lux-gold font-semibold hover:bg-lux-gold hover:text-black transition">Book a Call</a>
+                            <a href="#services" class="flex-1 text-center px-3 py-2 rounded-md bg-gray-800 text-gray-200 border border-gray-700">View Services</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Coaching & Mentoring Section -->
-        <section id="coaching" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-primary-blue">
-                    Specialist Medical & University Guidance
-                </h2>
-                <div class="max-w-4xl mx-auto space-y-10">
+    <!-- SERVICES -->
+    <section id="services" class="py-16 lg:py-24">
+        <div class="container mx-auto px-6 lg:px-12">
+            <h2 class="text-3xl font-bold text-white mb-8">Our Premium Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                    <!-- Medical Interview Coaching Card -->
-                    <div class="flex flex-col md:flex-row bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-secondary-green">
-                        <div class="md:w-1/3 flex items-center justify-center p-4">
-                            <svg class="w-16 h-16 text-secondary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-9.618 3.03M9 16.5V20H5V7a3 3 0 013-3h8a3 3 0 013 3v13h-4V16.5m-1 0a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"></path></svg>
+                <article class="glossy-card p-6 rounded-xl shadow-lg border border-card-glow">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-md flex items-center justify-center bg-black/50 ring-1 ring-gray-800">
+                            <svg class="w-6 h-6 text-lux-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/></svg>
                         </div>
-                        <div class="md:w-2/3 mt-4 md:mt-0">
-                            <h3 class="text-2xl font-semibold mb-3 text-primary-blue">Medical Interview Mastery</h3>
-                            <ul class="list-disc list-inside space-y-2 text-gray-600">
-                                <li>MMI (Multiple Mini Interview) and Panel Interview Preparation.</li>
-                                <li>Ethical Scenarios, Role-play, and Clinical Knowledge application.</li>
-                                <li>Personal Statement review and strategic UCAS application advice.</li>
+                        <h3 class="text-lg font-semibold">Science Exam Tuition (GCSE/A-Level)</h3>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-300">Deep conceptual teaching across Biology, Chemistry, and Physics with rigorous exam technique and bespoke resources.</p>
+                </article>
+
+                <article class="glossy-card p-6 rounded-xl shadow-lg border border-card-glow">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-md flex items-center justify-center bg-black/50 ring-1 ring-gray-800">
+                            <svg class="w-6 h-6 text-lux-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3 0 1.658 1.343 3 3 3s3-1.342 3-3c0-1.657-1.343-3-3-3z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold">STEM Career Coaching</h3>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-300">Guidance for high-achieving students on degree choices, internships, and career mapping in science and engineering.</p>
+                </article>
+
+                <article class="glossy-card p-6 rounded-xl shadow-lg border border-card-glow">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-md flex items-center justify-center bg-black/50 ring-1 ring-gray-800">
+                            <svg class="w-6 h-6 text-lux-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold">Medical Interview & Application Coaching</h3>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-300">MMI, Panel interviews, UCAT/BMAT prep, and personal statement refinement from a practicing clinician.</p>
+                </article>
+
+                <article class="glossy-card p-6 rounded-xl shadow-lg border border-card-glow">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-md flex items-center justify-center bg-black/50 ring-1 ring-gray-800">
+                            <svg class="w-6 h-6 text-lux-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold">English Language & Academic Writing</h3>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-300">TEFL-informed support for international students and advanced academic writing for STEM applicants.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16 lg:py-24 bg-black/20 border-t border-gray-800">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="lg:flex lg:items-center lg:gap-12">
+                <div class="lg:w-1/3">
+                    <img src="https://placehold.co/420x420/0f0f0f/ffffff?text=Dr+Saphire" alt="Dr Saphire portrait" class="w-full rounded-2xl shadow-2xl ring-1 ring-gray-800 object-cover" />
+                </div>
+                <div class="lg:w-2/3">
+                    <h2 class="text-3xl font-bold text-white">Dr Saphire: Clinical Excellence, Pedagogic Mastery</h2>
+                    <p class="mt-4 text-gray-300">MBChB | BSc Neuroscience | Postgraduate Diploma in Clinical Dermatology. Clinician and educator with over a decade of NHS experience and specialised training in secondary science pedagogy (PGCE - UCL).</p>
+                    <p class="mt-3 text-gray-300">Her approach blends evidence-based teaching, high-impact feedback, and tailored curriculum design — delivered with the polish and confidentiality expected by premium clients.</p>
+
+                    <div class="mt-6 grid grid-cols-2 gap-4 text-sm">
+                        <div class="p-4 glossy-card rounded-lg border border-card-glow">
+                            <strong class="text-white">Key Strengths</strong>
+                            <ul class="text-gray-300 mt-2 list-disc list-inside">
+                                <li>Medical & clinical expertise</li>
+                                <li>UCL evidence-based pedagogy</li>
+                                <li>Exam technique & metacognition</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 glossy-card rounded-lg border border-card-glow">
+                            <strong class="text-white">Services</strong>
+                            <ul class="text-gray-300 mt-2 list-disc list-inside">
+                                <li>Interview & UCAS strategy</li>
+                                <li>GCSE & A-level tuition</li>
+                                <li>STEM mentoring</li>
                             </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- STEM Mentoring Card -->
-                    <div class="flex flex-col md:flex-row bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-primary-blue">
-                        <div class="md:w-1/3 flex items-center justify-center p-4">
-                            <svg class="w-16 h-16 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.222.608 3.218 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        </div>
-                        <div class="md:w-2/3 mt-4 md:mt-0">
-                            <h3 class="text-2xl font-semibold mb-3 text-primary-blue">The STEM Coach</h3>
-                            <ul class="list-disc list-inside space-y-2 text-gray-600">
-                                <li>Transition support from secondary to higher education in science fields.</li>
-                                <li>Developing essential study skills for rigorous STEM subjects.</li>
-                                <li>Real-world insights on applying academic science to professional careers.</li>
-                            </ul>
+    <!-- COACHING -->
+    <section id="coaching" class="py-16 lg:py-24">
+        <div class="container mx-auto px-6 lg:px-12">
+            <h2 class="text-3xl font-bold text-white mb-8">Coaching & Mentoring</h2>
+            <div class="space-y-6">
+                <div class="glossy-card p-6 rounded-xl border border-card-glow flex flex-col md:flex-row md:items-center gap-6">
+                    <div class="md:w-1/4">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center bg-black/40 ring-1 ring-gray-800">
+                            <svg class="w-8 h-8 text-lux-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/></svg>
                         </div>
                     </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-xl font-semibold">Medical Interview Mastery</h3>
+                        <p class="mt-2 text-gray-300 text-sm">In-depth MMI and panel practice, ethical reasoning, role-play scenarios and high-fidelity feedback tailored to your interview style.</p>
+                    </div>
+                </div>
 
+                <div class="glossy-card p-6 rounded-xl border border-card-glow flex flex-col md:flex-row md:items-center gap-6">
+                    <div class="md:w-1/4">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center bg-black/40 ring-1 ring-gray-800">
+                            <svg class="w-8 h-8 text-lux-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"/></svg>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-xl font-semibold">STEM Pathway Mentoring</h3>
+                        <p class="mt-2 text-gray-300 text-sm">From A-level acceleration to university applications — a strategic programme to sharpen your academic profile and practical experience.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 md:py-24 bg-primary-blue text-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
-                    Ready to Take the Next Step?
-                </h2>
-                <p class="text-xl mb-8 opacity-90">
-                    Contact Dr. Saphire today to discuss your goals and create a personalized coaching plan.
-                </p>
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 lg:py-24 bg-black/10 border-t border-gray-800">
+        <div class="container mx-auto px-6 lg:px-12 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Get in touch</h2>
+            <p class="text-gray-300 mb-8">Private, confidential consultations. Select a time for a discovery call and secure premium coaching.</p>
 
-                <!-- Contact Form (Simplified) -->
-                <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-2xl text-gray-800">
-                    <form action="#" method="POST" class="space-y-4">
-                        <div>
-                            <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200">
-                        </div>
-                        <div>
-                            <input type="email" id="email" name="email" placeholder="Email Address" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200">
-                        </div>
-                        <div>
-                            <input type="tel" id="phone" name="phone" placeholder="Phone Number (Optional)"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200">
-                        </div>
-                        <div>
-                            <textarea id="message" name="message" rows="4" placeholder="How can Dr Saphire help you? (e.g., A-Level Biology, Medical Interview)" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full px-6 py-3 bg-secondary-green text-white font-bold rounded-lg text-lg shadow-lg hover:bg-primary-blue transition duration-300 transform hover:scale-[1.02]">
-                            Send Inquiry
-                        </button>
-                    </form>
-                    <p class="text-sm mt-4 text-gray-600">
-                        Alternatively, you can email us directly at: <a href="mailto:drsaphire@drsaphirestem.co.uk" class="text-primary-blue font-medium hover:underline">drsaphire@drsaphirestem.co.uk</a>
-                    </p>
-                </div>
+            <div class="max-w-xl mx-auto p-8 glossy-card rounded-2xl border border-card-glow">
+                <form action="#" method="POST" class="space-y-4">
+                    <input class="w-full px-4 py-3 rounded-lg bg-black/40 border border-gray-700 focus-ring" placeholder="Full name" required />
+                    <input class="w-full px-4 py-3 rounded-lg bg-black/40 border border-gray-700 focus-ring" placeholder="Email address" type="email" required />
+                    <input class="w-full px-4 py-3 rounded-lg bg-black/40 border border-gray-700 focus-ring" placeholder="Phone (optional)" type="tel" />
+                    <textarea class="w-full px-4 py-3 rounded-lg bg-black/40 border border-gray-700 focus-ring" rows="4" placeholder="How can Dr Saphire help you?" required></textarea>
+                    <button class="w-full px-4 py-3 rounded-full bg-gradient-to-r from-lux-gold to-lux-gold-deep text-black font-semibold shadow-lg">Send enquiry</button>
+                </form>
+                <p class="mt-4 text-xs text-gray-400">Or email: <a href="mailto:drsaphire@drsaphirestem.co.uk" class="text-lux-gold hover:underline">drsaphire@drsaphirestem.co.uk</a></p>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:items-center">
-            <div class="mb-4 md:mb-0">
-                <p class="text-sm">&copy; 2025 Dr Saphire STEM and Medical Academy. All rights reserved.</p>
-                <p class="text-xs mt-1">Website Address: drsaphirestem.co.uk</p>
-            </div>
-            <div class="flex justify-center space-x-6">
-                <!-- Social media icons would go here -->
-                <a href="#services" class="text-gray-400 hover:text-white transition duration-300 text-sm">Services</a>
-                <a href="#about" class="text-gray-400 hover:text-white transition duration-300 text-sm">About</a>
-                <a href="mailto:drsaphire@drsaphirestem.co.uk" class="text-gray-400 hover:text-white transition duration-300 text-sm">Contact</a>
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+            <div class="text-sm text-gray-400">&copy; 2025 Dr Saphire STEM and Medical Academy. All rights reserved.</div>
+            <div class="flex items-center gap-4">
+                <a href="#services" class="text-gray-400 hover:text-white">Services</a>
+                <a href="#about" class="text-gray-400 hover:text-white">About</a>
+                <a href="mailto:drsaphire@drsaphirestem.co.uk" class="text-gray-400 hover:text-white">Contact</a>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Simple mobile menu (toggle nav links) — small progressive enhancement
+        document.getElementById('mobileBtn')?.addEventListener('click', function(){
+            const nav = document.querySelector('nav');
+            if(!nav) return;
+            nav.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>
